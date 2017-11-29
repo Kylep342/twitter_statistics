@@ -1,0 +1,9 @@
+This is an example 'config.yaml' file:
+To access the Twitter API, place your keys
+at the appropriate YAML tags.
+
+twitter:
+  ckey:         '...'
+  csecret:      '...'
+  token:        '...'
+  tokensecret:  '...'
