@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import tweepy
 import yaml
 
