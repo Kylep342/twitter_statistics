@@ -2,7 +2,7 @@ import html
 import nltk
 
 
-class cleanTweets(object):
+class CleanTweets(object):
     """
     """
     def __init__(self, input_text):
@@ -23,3 +23,9 @@ class cleanTweets(object):
         if tagset == 'universal':
             nltk.download('universal_tagset')
         return nltk.pos_tag(self.word_list, tagset=tagset)
+
+    def filter_by_pos(self, pos):
+        if pos.upper() not in ['NOUN', 'VERB', 'ADJECTIVE', 'ADVERB']:
+            print("Invalid part of speech choice.")
+            exit()
+        return [word[0] for word in self.get_pos() if word[1] == pos.upper()]
