@@ -20,9 +20,10 @@ class AnalyzeTweets(object):
     def wordfreqgraph(self, title):
         indexes = np.arange(len(self.freqdict.keys()))
         width = 0.7
+        plt.clf()
         plt.title(title)
         plt.xlabel('Word')
         plt.ylabel('Frequency')
-        plt.bar(indexes, self.worddict.values(), width)
-        plt.xticks(indexes + width * 0.5, self.freqdict.keys())
+        plt.bar(indexes, self.freqdict.values(), width)
+        plt.xticks(indexes + width * 0.5, self.freqdict.keys(), rotation=90)
         plt.savefig("plots/{0}.png".format(title))

@@ -20,9 +20,11 @@ class CleanTweets(object):
                          word[0] == '@']
 
     def get_pos(self, tagset='universal'):
-        if tagset == 'universal':
+        try:
+            return nltk.pos_tag(self.word_list, tagset=tagset)
+        except:
             nltk.download('universal_tagset')
-        return nltk.pos_tag(self.word_list, tagset=tagset)
+            return nltk.pos_tag(self.word_list, tagset=tagset)
 
     def filter_by_pos(self, pos):
         if pos.upper() not in ['NOUN', 'VERB', 'ADJECTIVE', 'ADVERB']:
