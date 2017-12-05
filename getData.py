@@ -1,8 +1,9 @@
+#!/usr/bin/env python
 import tweepy
 import yaml
 
 
-class FindTweets(object):
+class GetTweets(object):
     """
     """
     def __init__(self):
@@ -24,7 +25,7 @@ class FindTweets(object):
 
         self.api = tweepy.API(auth)
 
-    def getTweets(self, handle, tcount=100):
+    def findTweets(self, handle, tcount=200):
         """
         This method returns the specified number of tweets from the
         specified user's handle as a string.
