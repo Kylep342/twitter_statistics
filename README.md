@@ -1,4 +1,4 @@
-### Twitter Statistics
+# Twitter Statistics
 
 Welcome to Twitter Statictics!
 
