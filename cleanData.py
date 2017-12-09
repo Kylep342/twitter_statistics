@@ -4,6 +4,8 @@ import nltk
 
 class CleanTweets(object):
     """
+    This class hosts functions centered around organizing words in
+    tweets by part-of-speech.
     """
     def __init__(self, input_text):
         """
@@ -12,7 +14,7 @@ class CleanTweets(object):
         self.text = html.unescape(input_text)
         self.text_list = self.text.split()
         self.word_list = [word for word in self.text_list if
-                          word.isalpha()]
+                          word.isalpha() and word != 'RT']
         self.words = " ".join(self.word_list)
         self.hashtags = [word for word in self.text_list if
                          word[0] == '#']
