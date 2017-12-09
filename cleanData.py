@@ -9,7 +9,9 @@ class CleanTweets(object):
     """
     def __init__(self, input_text):
         """
-        Instantiating this object escapes
+        Instantiating this object escapes all characters in tweets.
+        A CleanTweets() object also provides several attributes
+        useful for analzying different aspects of tweets.
         """
         self.text = html.unescape(input_text)
         self.text_list = self.text.split()
@@ -29,7 +31,18 @@ class CleanTweets(object):
             return nltk.pos_tag(self.word_list, tagset=tagset)
 
     def filter_by_pos(self, pos):
-        if pos.upper() not in ['NOUN', 'VERB', 'ADJECTIVE', 'ADVERB']:
+        if pos.upper() not in ['NOUN',
+                               'VERB',
+                               'ADJECTIVE',
+                               'ADJ',
+                               'ADVERB',
+                               'ADV']:
             print("Invalid part of speech choice.")
             exit()
-        return [word[0] for word in self.get_pos() if word[1] == pos.upper()]
+        elif pos.upper() == 'ADJECTIVE':
+            filterpos = 'ADJ'
+        elif pos.upper() == 'ADVERB':
+            filterpos = 'ADV'
+        else:
+            filterpos = pos.upper()
+        return [word[0] for word in self.get_pos() if word[1] == filterpos]
