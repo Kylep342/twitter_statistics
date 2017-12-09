@@ -1,6 +1,6 @@
 # Twitter Statistics
 
-![Alt text](git_images/@BarackObama's top 25 nouns.png?raw=true "Sample Plot")
+![Alt text](git_images/@BarackObamas_top_25_nouns.png?raw=true "Sample Plot")
 
 Welcome to Twitter Statictics!
 

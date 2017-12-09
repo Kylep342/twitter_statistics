@@ -30,4 +30,4 @@ class AnalyzeTweets(object):
         plt.bar(indexes, self.mostfreqdict.values(), width)
         plt.xticks(indexes, self.mostfreqdict.keys(), rotation=90)
         plt.tight_layout()
-        plt.savefig("plots/{0}.png".format(title))
+        plt.savefig("plots/{0}.png".format(title.replace("'", "").replace(" ", "_")))
