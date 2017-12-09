@@ -2,3 +2,4 @@ config.yaml
 **.pyc
 *.pyc
 plots/*
+.DS_Store
