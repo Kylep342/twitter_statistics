@@ -14,7 +14,7 @@ class GetTweets(object):
         These are passed to a tweepy.OAuthHandler object which is then
         used to create an api endpoint.
         """
-        cfg = yaml.load(open('config.yaml', 'r'))
+        cfg = yaml.safe_load(open('config.yaml', 'r'))
         consumer_key = cfg['twitter']['ckey']
         consumer_secret = cfg['twitter']['csecret']
         access_token = cfg['twitter']['token']
