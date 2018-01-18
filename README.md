@@ -9,10 +9,10 @@ of various natural language analyses of Twitter users' Tweets.
 
 ## How to Run
 
-To run an analysis, simply modify the **instructions.yaml** file to include
+To run an analysis, simply modify the `instructions.yaml` file to include
 as many Twitter handles as you need to analyze!
 
-Then run `python main.py noun` and you've got your graphs!
+Then run `python twitter_statistics.py noun` and you've got your graphs!
 
 By default, you will get graphs of the top 25 of whatever part of speech you
 pass at runtime used by each twitter handle passed in the `instructions.yaml`
