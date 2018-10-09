@@ -1,7 +1,6 @@
 certifi==2017.11.5
 chardet==3.0.4
 cycler==0.10.0
-Django==2.0
 HTMLParser==0.0.2
 idna==2.6
 image==1.5.16
