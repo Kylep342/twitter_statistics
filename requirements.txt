@@ -25,7 +25,7 @@ cycler==0.10.0
 idna==2.8
 kiwisolver==1.0.1
 matplotlib==3.0.2
-nltk==3.4
+nltk==3.4.5
 numpy==1.16.0
 oauthlib==3.0.1
 pyparsing==2.3.1
@@ -44,7 +44,7 @@ cycler==0.10.0
 idna==2.8
 kiwisolver==1.0.1
 matplotlib==3.0.2
-nltk==3.4
+nltk==3.4.5
 numpy==1.16.0
 oauthlib==3.0.1
 pyparsing==2.3.1
